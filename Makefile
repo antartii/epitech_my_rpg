@@ -5,11 +5,11 @@
 ## rpg for epitech
 ##
 
-CC = gcc
+CC = x86_64-w64-mingw32-gcc
 
 CFLAGS = -L./lib/my/ -Wall -Wextra -std=c99 -I./include/
 
-LIB = -lcsfml-graphics -lcsfml-window -lcsfml-system -lcsfml-audio
+LIB = -lcsfml-graphics -lcsfml-window -lcsfml-system -lcsfml-audio -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -pthread
 
 DEBUGCFLAGS = -g
 
@@ -77,7 +77,7 @@ SRC = $(foreach file, $(SRC_FILES), $(addprefix $(SRC_DIR), $(file)))
 
 OBJ = $(SRC:.c = .o)
 
-NAME = my_rpg
+NAME = my_rpg.exe
 
 DEBUGNAME = my_rpg_dev
 

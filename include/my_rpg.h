@@ -14,7 +14,12 @@
     #include <stddef.h>
     #include <stdlib.h>
     #include <fcntl.h>
-    #include <sys/errno.h>
+    #ifdef _WIN32
+        #include <errno.h>
+    #else
+        #include <sys/errno.h>
+    #endif
+
     #include <string.h>
     #include <dirent.h>
     #include <sys/stat.h>

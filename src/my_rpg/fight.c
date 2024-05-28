@@ -44,7 +44,7 @@ int flee(game_data_t *game_data)
 {
     entity_t *player = get_entity(game_data->entities, "player");
     int flee_chance_percentage = player->curr_spd;
-    time_t t = {};
+    time_t t;
     int result = 0;
 
     srand((unsigned int) time(&t));
