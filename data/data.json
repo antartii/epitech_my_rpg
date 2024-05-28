@@ -1,0 +1,787 @@
+{
+    "game_settings":{
+        "game_speed":0.2
+    },
+    "window":{
+        "title":"my_rpg",
+        "style":7,
+        "video mode":{
+            "width":1920,
+            "height":1080,
+            "bitsPerPixel":32
+        }
+    },
+    "audio": {
+        "lmao_you_re_dumb":"audio/lmao-ure-dumb.ogg"
+    },
+    "maps":{
+        "tutorial": {
+            "file":"data/map.antamap",
+            "window_scale":{"x":10, "y":10},
+            "scale":{"x":16, "y":16},
+            "texture":"grass_tile",
+            "empty_texture":"empty_texture"
+        }
+    },
+    "textures": {
+        "player":"textures/player.png",
+        "starting_background":"textures/starting_background.png",
+        "starting_buttons":"textures/start_buttons.png",
+        "choosing_save":"textures/choosing_save.png",
+        "return_button":"textures/return_button.png",
+        "settings_button":"textures/settings_buttons.png",
+        "settings_background":"textures/background.png",
+        "video_settings":"textures/video_settings.png",
+        "audio_settings":"textures/audio_settings.png",
+        "check_box":"textures/checkbox.png",
+        "grass_tile":"textures/town_tiles.png",
+        "empty_texture":"textures/empty_texture.png",
+        "signs":"textures/signs-Sheet.png",
+        "inventory":"textures/inventory_tile.png",
+        "music_change":"textures/music_change.png",
+        "bag_background":"textures/bag.png",
+        "fighting_background":"assets/fight_background.png",
+        "enemy":"assets/enemy.png",
+        "fight_buttons":"assets/fight_choice.png",
+        "hp":"assets/hp.png",
+        "game_over":"textures/game_over2.png",
+        "pnj":"assets/pnj.png",
+        "inv": "assets/inventory.png",
+        "cursor":"assets/cursor.png"
+    },
+    "sprites": {
+        "player": {
+            "offset":{"x":17,"y":17},
+            "start_pos":{"x":"left", "y":"top"},
+            "texture_rect":{
+                "top":0,
+                "left":0,
+                "height":16,
+                "width":16
+            },
+            "max_frame":1,
+            "scale":{"x":10,"y":10},
+            "texture":"player",
+            "fps":0,
+            "visibility":true
+        },
+        "game_over": {
+            "offset":{"x":0,"y":0},
+            "start_pos":{"x":"left", "y":"top"},
+            "texture_rect":{
+                "top":0,
+                "left":0,
+                "height":108,
+                "width":192
+            },
+            "max_frame":1,
+            "scale":{"x":7,"y":7},
+            "texture":"game_over",
+            "fps":0,
+            "visibility":true
+        },
+        "signs": {
+            "offset":{"x":0,"y":0},
+            "start_pos":{"x":"center", "y":"center"},
+            "texture_rect":{
+                "top":0,
+                "left":0,
+                "height":16,
+                "width":16
+            },
+            "max_frame":11,
+            "scale":{"x":10,"y":10},
+            "texture":"signs",
+            "fps":0,
+            "visibility":true
+        },
+        "starting_background": {
+            "offset":{"x":0,"y":0},
+            "start_pos":{"x":"left", "y":"top"},
+            "texture_rect":{
+                "top":0,
+                "left":0,
+                "height":108,
+                "width":192
+            },
+            "max_frame":1,
+            "scale":{"x":10,"y":10},
+            "texture":"starting_background",
+            "fps":0,
+            "visibility":true
+        },
+        "starting_button_start": {
+            "offset":{"x":-32,"y":-10},
+            "start_pos":{"x":"center", "y":"center"},
+            "texture_rect":{
+                "top":0,
+                "left":0,
+                "height":32,
+                "width":64
+            },
+            "max_frame":3,
+            "scale":{"x":10,"y":10},
+            "texture":"starting_buttons",
+            "fps":0,
+            "visibility":true
+        },
+        "starting_button_others": {
+            "offset":{"x":-32,"y":15},
+            "start_pos":{"x":"center", "y":"center"},
+            "texture_rect":{
+                "top":32,
+                "left":0,
+                "height":32,
+                "width":64
+            },
+            "max_frame":3,
+            "scale":{"x":10,"y":10},
+            "texture":"starting_buttons",
+            "fps":0,
+            "visibility":true
+        },
+        "starting_button_exit": {
+            "offset":{"x":-50,"y":-28},
+            "start_pos":{"x":"right", "y":"bottom"},
+            "texture_rect":{
+                "top":64,
+                "left":0,
+                "height":32,
+                "width":64
+            },
+            "max_frame":3,
+            "scale":{"x":10,"y":10},
+            "texture":"starting_buttons",
+            "fps":0,
+            "visibility":true
+        },
+        "starting_button_new": {
+            "offset":{"x":-36,"y":-8},
+            "start_pos":{"x":"center", "y":"center"},
+            "texture_rect":{
+                "top":0,
+                "left":0,
+                "height":38,
+                "width":72
+            },
+            "max_frame":3,
+            "scale":{"x":7,"y":7},
+            "texture":"choosing_save",
+            "fps":0,
+            "visibility":false
+        },
+        "starting_button_load": {
+            "offset":{"x":-33,"y":30},
+            "start_pos":{"x":"center", "y":"center"},
+            "texture_rect":{
+                "top":38,
+                "left":0,
+                "height":38,
+                "width":72
+            },
+            "max_frame":3,
+            "scale":{"x":7,"y":7},
+            "texture":"choosing_save",
+            "fps":0,
+            "visibility":false
+        },
+        "return_button": {
+            "offset":{"x":-45,"y":0},
+            "start_pos":{"x":"right", "y":"top"},
+            "texture_rect":{
+                "top":0,
+                "left":0,
+                "height":31,
+                "width":45
+            },
+            "max_frame":3,
+            "scale":{"x":10,"y":10},
+            "texture":"return_button",
+            "fps":0,
+            "visibility":false
+        },
+        "audio_button": {
+            "offset":{"x":-37,"y":0},
+            "start_pos":{"x":"center", "y":"center"},
+            "texture_rect":{
+                "top":0,
+                "left":0,
+                "height":32,
+                "width":74
+            },
+            "max_frame":3,
+            "scale":{"x":7,"y":7},
+            "texture":"settings_button",
+            "fps":0,
+            "visibility":false
+        },
+        "video_button": {
+            "offset":{"x":-37,"y":35},
+            "start_pos":{"x":"center", "y":"center"},
+            "texture_rect":{
+                "top":33,
+                "left":0,
+                "height":32,
+                "width":74
+            },
+            "max_frame":3,
+            "scale":{"x":7,"y":7},
+            "texture":"settings_button",
+            "fps":0,
+            "visibility":false
+        },
+        "settings_background": {
+            "offset":{"x":0,"y":-1},
+            "start_pos":{"x":"left", "y":"top"},
+            "texture_rect":{
+                "top":0,
+                "left":0,
+                "height":108,
+                "width":192
+            },
+            "max_frame":1,
+            "scale":{"x":10,"y":10},
+            "texture":"settings_background",
+            "fps":0,
+            "visibility":false
+        },
+        "video_settings": {
+            "offset":{"x":0,"y":-1},
+            "start_pos":{"x":"left", "y":"top"},
+            "texture_rect":{
+                "top":0,
+                "left":0,
+                "height":108,
+                "width":192
+            },
+            "max_frame":1,
+            "scale":{"x":10,"y":10},
+            "texture":"video_settings",
+            "fps":0,
+            "visibility":false
+        },
+        "audio_settings": {
+            "offset":{"x":0,"y":-1},
+            "start_pos":{"x":"left", "y":"top"},
+            "texture_rect":{
+                "top":0,
+                "left":0,
+                "height":108,
+                "width":192
+            },
+            "max_frame":1,
+            "scale":{"x":10,"y":10},
+            "texture":"audio_settings",
+            "fps":0,
+            "visibility":false
+        },
+        "check_box": {
+            "offset":{"x":50,"y":-7},
+            "start_pos":{"x":"center", "y":"center"},
+            "texture_rect":{
+                "top":0,
+                "left":0,
+                "height":16,
+                "width":16
+            },
+            "max_frame":3,
+            "scale":{"x":10,"y":10},
+            "texture":"check_box",
+            "fps":0,
+            "visibility":false
+        },
+        "change_music_right": {
+            "offset":{"x":16,"y":0},
+            "start_pos":{"x":"center", "y":"center"},
+            "texture_rect":{
+                "top":0,
+                "left":0,
+                "height":16,
+                "width":16
+            },
+            "max_frame":3,
+            "scale":{"x":10,"y":10},
+            "texture":"music_change",
+            "fps":0,
+            "visibility":false
+        },
+        "change_music_left": {
+            "offset":{"x":0,"y":0},
+            "start_pos":{"x":"center", "y":"center"},
+            "texture_rect":{
+                "top":16,
+                "left":0,
+                "height":16,
+                "width":16
+            },
+            "max_frame":3,
+            "scale":{"x":10,"y":10},
+            "texture":"music_change",
+            "fps":0,
+            "visibility":false
+        },
+        "bag_background": {
+            "offset":{"x":0,"y":0},
+            "start_pos":{"x":"left", "y":"top"},
+            "texture_rect":{
+                "top":0,
+                "left":0,
+                "height":192,
+                "width":108
+            },
+            "max_frame":3,
+            "scale":{"x":10,"y":10},
+            "texture":"bag_background",
+            "fps":0,
+            "visibility":false
+        },
+        "fighting_background": {
+            "offset":{"x":0,"y":0},
+            "start_pos":{"x":"left", "y":"top"},
+            "texture_rect":{
+                "top":0,
+                "left":0,
+                "height":108,
+                "width":192
+            },
+            "max_frame":9,
+            "scale":{"x":10,"y":10},
+            "texture":"fighting_background",
+            "fps":0,
+            "visibility":true
+        },
+        "player_fight": {
+            "offset":{"x":-50,"y":-5},
+            "start_pos":{"x":"center", "y":"center"},
+            "texture_rect":{
+                "top":0,
+                "left":0,
+                "height":16,
+                "width":16
+            },
+            "max_frame":1,
+            "scale":{"x":10,"y":10},
+            "texture":"player",
+            "fps":0,
+            "visibility":true
+        },
+        "enemy": {
+            "offset":{"x":35,"y":-5},
+            "start_pos":{"x":"center", "y":"center"},
+            "texture_rect":{
+                "top":0,
+                "left":0,
+                "height":16,
+                "width":16
+            },
+            "max_frame":1,
+            "scale":{"x":10,"y":10},
+            "texture":"enemy",
+            "fps":0,
+            "visibility":true
+        },
+        "attack_button": {
+            "offset":{"x":0,"y":-35},
+            "start_pos":{"x":"left", "y":"bottom"},
+            "texture_rect":{
+                "top":0,
+                "left":0,
+                "height":11,
+                "width":64
+            },
+            "max_frame":3,
+            "scale":{"x":10,"y":10},
+            "texture":"fight_buttons",
+            "fps":0,
+            "visibility":true
+        },
+        "backpack_button": {
+            "offset":{"x":0,"y":-24},
+            "start_pos":{"x":"left", "y":"bottom"},
+            "texture_rect":{
+                "top":11,
+                "left":0,
+                "height":11,
+                "width":64
+            },
+            "max_frame":3,
+            "scale":{"x":10,"y":10},
+            "texture":"fight_buttons",
+            "fps":0,
+            "visibility":true
+        },
+        "flee_button": {
+            "offset":{"x":0,"y":-13},
+            "start_pos":{"x":"left", "y":"bottom"},
+            "texture_rect":{
+                "top":22,
+                "left":0,
+                "height":11,
+                "width":64
+            },
+            "max_frame":3,
+            "scale":{"x":10,"y":10},
+            "texture":"fight_buttons",
+            "fps":0,
+            "visibility":true
+        },
+        "hp_player": {
+            "offset":{"x":0,"y":0},
+            "start_pos":{"x":"left", "y":"top"},
+            "texture_rect":{
+                "top":0,
+                "left":0,
+                "height":17,
+                "width":67
+            },
+            "max_frame":11,
+            "scale":{"x":10,"y":10},
+            "texture":"hp",
+            "fps":0,
+            "visibility":true
+        },
+        "hp_enemy": {
+            "offset":{"x":-67,"y":0},
+            "start_pos":{"x":"right", "y":"top"},
+            "texture_rect":{
+                "top":0,
+                "left":67,
+                "height":17,
+                "width":67
+            },
+            "max_frame":11,
+            "scale":{"x":10,"y":10},
+            "texture":"hp",
+            "fps":0,
+            "visibility":true
+        },
+        "pnj": {
+            "offset":{"x":90,"y":15},
+            "start_pos":{"x":"left", "y":"top"},
+            "texture_rect":{
+                "top":0,
+                "left":0,
+                "height":30,
+                "width":21
+            },
+            "max_frame":11,
+            "scale":{"x":4,"y":4},
+            "texture":"pnj",
+            "fps":0,
+            "visibility":true
+        },
+        "inv": {
+            "offset":{"x":-16,"y":-14},
+            "start_pos":{"x":"center", "y":"bottom"},
+            "texture_rect":{
+                "top":0,
+                "left":0,
+                "height":13,
+                "width":33
+            },
+            "max_frame":1,
+            "scale":{"x":10,"y":10},
+            "texture":"inv",
+            "fps":0,
+            "visibility":true
+        },
+        "cursor": {
+            "offset":{"x":0,"y":0},
+            "start_pos":{"x":"center", "y":"center"},
+            "texture_rect":{
+                "top":0,
+                "left":0,
+                "height":108,
+                "width":96
+            },
+            "max_frame":1,
+            "scale":{"x":1,"y":1},
+            "texture":"cursor",
+            "fps":0,
+            "visibility":true
+        }
+    },
+    "buttons": {
+        "starting_screen_start":{
+            "pos":{"x":-28,"y":-8},
+            "start_pos":{"x":"center", "y":"center"},
+            "scale":{"x":10, "y":10},
+            "bounds":{
+                "top":0,
+                "left":0,
+                "height":25,
+                "width":57
+            },
+            "sprite":"starting_button_start",
+            "base state":0
+        },
+        "starting_screen_other":{
+            "pos":{"x":-28,"y":19},
+            "start_pos":{"x":"center", "y":"center"},
+            "scale":{"x":10, "y":10},
+            "bounds":{
+                "top":0,
+                "left":0,
+                "height":26,
+                "width":57
+            },
+            "sprite":"starting_button_others",
+            "base state":0
+        },
+        "starting_screen_exit":{
+            "pos":{"x":-36,"y":-22},
+            "start_pos":{"x":"right", "y":"bottom"},
+            "scale":{"x":10, "y":10},
+            "bounds":{
+                "top":0,
+                "left":0,
+                "height":20,
+                "width":34
+            },
+            "sprite":"starting_button_exit",
+            "base state":0
+        },
+        "choose_save_new":{
+            "pos":{"x":-23,"y":-6},
+            "start_pos":{"x":"center", "y":"center"},
+            "scale":{"x":10, "y":10},
+            "bounds":{
+                "top":0,
+                "left":0,
+                "height":25,
+                "width":48
+            },
+            "sprite":"starting_button_new",
+            "base state":0
+        },
+        "choose_save_load":{
+            "pos":{"x":-23,"y":21},
+            "start_pos":{"x":"center", "y":"center"},
+            "scale":{"x":10, "y":10},
+            "bounds":{
+                "top":0,
+                "left":0,
+                "height":25,
+                "width":48
+            },
+            "sprite":"starting_button_load",
+            "base state":0
+        },
+        "return_button":{
+            "pos":{"x":-43,"y":0},
+            "start_pos":{"x":"right", "y":"top"},
+            "scale":{"x":10, "y":10},
+            "bounds":{
+                "top":0,
+                "left":0,
+                "height":30,
+                "width":43
+            },
+            "sprite":"return_button",
+            "base state":0
+        },
+        "audio_button":{
+            "pos":{"x":-37,"y":0},
+            "start_pos":{"x":"center", "y":"center"},
+            "scale":{"x":7, "y":7},
+            "bounds":{
+                "top":0,
+                "left":0,
+                "height":32,
+                "width":74
+            },
+            "sprite":"audio_button",
+            "base state":0
+        },
+        "video_button":{
+            "pos":{"x":-37,"y":35},
+            "start_pos":{"x":"center", "y":"center"},
+            "scale":{"x":7, "y":7},
+            "bounds":{
+                "top":0,
+                "left":0,
+                "height":32,
+                "width":74
+            },
+            "sprite":"video_button",
+            "base state":0
+        },
+        "check_box":{
+            "pos":{"x":50,"y":-5},
+            "start_pos":{"x":"center", "y":"center"},
+            "scale":{"x":10, "y":10},
+            "bounds":{
+                "top":0,
+                "left":0,
+                "height":14,
+                "width":14
+            },
+            "sprite":"check_box",
+            "base state":0
+        },
+
+        "change_music_right":{
+            "pos":{"x":16,"y":0},
+            "start_pos":{"x":"center", "y":"center"},
+            "scale":{"x":10, "y":10},
+            "bounds":{
+                "top":0,
+                "left":0,
+                "height":16,
+                "width":16
+            },
+            "sprite":"change_music_right",
+            "base state":0
+        },
+        "change_music_left":{
+            "pos":{"x":0,"y":0},
+            "start_pos":{"x":"center", "y":"center"},
+            "scale":{"x":10, "y":10},
+            "bounds":{
+                "top":0,
+                "left":0,
+                "height":16,
+                "width":16
+            },
+            "sprite":"change_music_left",
+            "base state":0
+        },
+        "attack_button":{
+            "pos":{"x":0,"y":-35},
+            "start_pos":{"x":"left", "y":"bottom"},
+            "scale":{"x":10, "y":10},
+            "bounds":{
+                "top":0,
+                "left":0,
+                "height":11,
+                "width":64
+            },
+            "sprite":"attack_button",
+            "base state":0
+        },
+        "backpack_button": {
+            "pos":{"x":0,"y":-24},
+            "start_pos":{"x":"left", "y":"bottom"},
+            "scale":{"x":10, "y":10},
+            "bounds":{
+                "top":11,
+                "left":0,
+                "height":11,
+                "width":64
+            },
+            "sprite":"backpack_button",
+            "base state":0
+        },
+        "flee_button": {
+            "pos":{"x":0,"y":-13},
+            "start_pos":{"x":"left", "y":"bottom"},
+            "scale":{"x":10, "y":10},
+            "bounds":{
+                "top":22,
+                "left":0,
+                "height":11,
+                "width":64
+            },
+            "sprite":"flee_button",
+            "base state":0
+        }
+    },
+    "displays": {
+        "starting_screen":[
+            "starting_background",
+            "starting_button_start",
+            "starting_button_others",
+            "starting_button_new",
+            "starting_button_load",
+            "audio_button",
+            "video_button",
+            "settings_background",
+            "video_settings",
+            "audio_settings",
+            "check_box",
+            "return_button",
+            "starting_button_exit",
+            "change_music_right",
+            "change_music_left",
+            "cursor"
+        ],
+        "exploration":[
+            "pnj",
+            "player",
+            "signs",
+            "bag_background"
+        ],
+        "fighting":[
+            "fighting_background",
+            "player_fight",
+            "enemy",
+            "attack_button",
+            "backpack_button",
+            "flee_button",
+            "hp_player",
+            "hp_enemy",
+            "inv"
+        ],
+        "game_over": [
+            "game_over"
+        ]
+    },
+    "menu": {
+        "starting_menu":[
+            "starting_screen_start",
+            "starting_screen_other",
+            "starting_screen_exit"
+        ],
+        "choose_save":[
+            "choose_save_new",
+            "choose_save_load",
+            "return_button",
+            "starting_screen_exit"
+        ],
+        "settings": [
+            "audio_button",
+            "video_button",
+            "return_button",
+            "starting_screen_exit"
+        ],
+        "settings_audio": [
+            "change_music_right",
+            "change_music_left",
+            "return_button"
+        ],
+        "settings_video": [
+            "check_box",
+            "return_button"
+        ],
+        "exploration": [
+
+        ],
+        "fighting": [
+            "attack_button",
+            "backpack_button",
+            "flee_button"
+        ]
+    },
+    "entities": {
+        "player": {
+            "name":"player",
+            "atk":0,
+            "def":2,
+            "hp":30,
+            "speed":10,
+            "luck":50,
+            "direction":"NORTH",
+            "sprite":"player"
+        },
+        "enemy": {
+            "name":"enemy",
+            "atk":5,
+            "def":1,
+            "hp":15,
+            "speed":5,
+            "luck":5,
+            "direction":"NORTH",
+            "sprite":"player"
+        }
+    }
+}

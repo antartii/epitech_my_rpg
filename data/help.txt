@@ -1,0 +1,15 @@
+NAME
+    ./my_rpg - rpg from the "graphical programming" module of Epitech Technology school
+
+SYNOPSYS
+    ./my_rpg [OPTIONS]
+
+DESCRIPTION
+    my_rpg
+
+OPTIONS
+    -h  Prints this message and exit.
+
+    -d Launch the game in devmode.
+
+This program was made by SENG Tom, for the "graphical programming" module of the Eptiech Technology school
